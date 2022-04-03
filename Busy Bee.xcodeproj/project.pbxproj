@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		16492A0E27FA117D006F0CFF /* Busy_BeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16492A0D27FA117D006F0CFF /* Busy_BeeApp.swift */; };
-		16492A1027FA117D006F0CFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16492A0F27FA117D006F0CFF /* ContentView.swift */; };
 		16492A1227FA117F006F0CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16492A1127FA117F006F0CFF /* Assets.xcassets */; };
 		16492A1527FA117F006F0CFF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16492A1427FA117F006F0CFF /* Preview Assets.xcassets */; };
 		16492A2027FA117F006F0CFF /* Busy_BeeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16492A1F27FA117F006F0CFF /* Busy_BeeTests.swift */; };
 		16492A2A27FA117F006F0CFF /* Busy_BeeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16492A2927FA117F006F0CFF /* Busy_BeeUITests.swift */; };
 		16492A2C27FA117F006F0CFF /* Busy_BeeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16492A2B27FA117F006F0CFF /* Busy_BeeUITestsLaunchTests.swift */; };
+		16492A4027FA298B006F0CFF /* friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16492A3F27FA298B006F0CFF /* friends.swift */; };
+		16492A4D27FA34B5006F0CFF /* status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16492A4C27FA34B5006F0CFF /* status.swift */; };
+		16492A5827FA3C3B006F0CFF /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 16492A5727FA3C3B006F0CFF /* Credits.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		16492A0A27FA117D006F0CFF /* Busy Bee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Busy Bee.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16492A0D27FA117D006F0CFF /* Busy_BeeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Busy_BeeApp.swift; sourceTree = "<group>"; };
-		16492A0F27FA117D006F0CFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		16492A1127FA117F006F0CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		16492A1427FA117F006F0CFF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		16492A1627FA117F006F0CFF /* Busy_Bee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Busy_Bee.entitlements; sourceTree = "<group>"; };
@@ -45,6 +46,10 @@
 		16492A2527FA117F006F0CFF /* Busy BeeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Busy BeeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16492A2927FA117F006F0CFF /* Busy_BeeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Busy_BeeUITests.swift; sourceTree = "<group>"; };
 		16492A2B27FA117F006F0CFF /* Busy_BeeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Busy_BeeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		16492A3E27FA1DB6006F0CFF /* colour_changer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = colour_changer.py; sourceTree = "<group>"; };
+		16492A3F27FA298B006F0CFF /* friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friends.swift; sourceTree = "<group>"; };
+		16492A4C27FA34B5006F0CFF /* status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = status.swift; sourceTree = "<group>"; };
+		16492A5727FA3C3B006F0CFF /* Credits.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +80,7 @@
 		16492A0127FA117D006F0CFF = {
 			isa = PBXGroup;
 			children = (
+				16492A3D27FA1DA4006F0CFF /* icon_maker */,
 				16492A0C27FA117D006F0CFF /* Busy Bee */,
 				16492A1E27FA117F006F0CFF /* Busy BeeTests */,
 				16492A2827FA117F006F0CFF /* Busy BeeUITests */,
@@ -96,10 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				16492A0D27FA117D006F0CFF /* Busy_BeeApp.swift */,
-				16492A0F27FA117D006F0CFF /* ContentView.swift */,
-				16492A1127FA117F006F0CFF /* Assets.xcassets */,
-				16492A1627FA117F006F0CFF /* Busy_Bee.entitlements */,
+				16492A4327FA33BA006F0CFF /* models */,
 				16492A1327FA117F006F0CFF /* Preview Content */,
+				16492A5A27FA454D006F0CFF /* supporting files */,
 			);
 			path = "Busy Bee";
 			sourceTree = "<group>";
@@ -127,6 +132,33 @@
 				16492A2B27FA117F006F0CFF /* Busy_BeeUITestsLaunchTests.swift */,
 			);
 			path = "Busy BeeUITests";
+			sourceTree = "<group>";
+		};
+		16492A3D27FA1DA4006F0CFF /* icon_maker */ = {
+			isa = PBXGroup;
+			children = (
+				16492A3E27FA1DB6006F0CFF /* colour_changer.py */,
+			);
+			path = icon_maker;
+			sourceTree = "<group>";
+		};
+		16492A4327FA33BA006F0CFF /* models */ = {
+			isa = PBXGroup;
+			children = (
+				16492A3F27FA298B006F0CFF /* friends.swift */,
+				16492A4C27FA34B5006F0CFF /* status.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		16492A5A27FA454D006F0CFF /* supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				16492A5727FA3C3B006F0CFF /* Credits.html */,
+				16492A1627FA117F006F0CFF /* Busy_Bee.entitlements */,
+				16492A1127FA117F006F0CFF /* Assets.xcassets */,
+			);
+			name = "supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16492A1527FA117F006F0CFF /* Preview Assets.xcassets in Resources */,
+				16492A5827FA3C3B006F0CFF /* Credits.html in Resources */,
 				16492A1227FA117F006F0CFF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +292,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16492A1027FA117D006F0CFF /* ContentView.swift in Sources */,
+				16492A4D27FA34B5006F0CFF /* status.swift in Sources */,
 				16492A0E27FA117D006F0CFF /* Busy_BeeApp.swift in Sources */,
+				16492A4027FA298B006F0CFF /* friends.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +458,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Busy-Bee-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -451,6 +487,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Busy-Bee-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
