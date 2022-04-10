@@ -7,8 +7,8 @@
 
 import Foundation
 
-enum WorkStatus {
-    case DO_NOT_DISTURB
-    case BUSY
-    case FREE
+enum WorkStatus: Int, Codable {
+    case FREE = 0
+    case BUSY = 1
+    case DO_NOT_DISTURB = 2
 }
