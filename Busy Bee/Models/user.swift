@@ -6,6 +6,6 @@
 //
 
 struct User: Identifiable, Codable {
-    private(set) var id: String
-    let status: WorkStatus
+    let id: String
+    var status: WorkStatus
 }

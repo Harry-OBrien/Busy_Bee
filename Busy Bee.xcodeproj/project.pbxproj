@@ -23,9 +23,8 @@
 		16492A4D27FA34B5006F0CFF /* status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16492A4C27FA34B5006F0CFF /* status.swift */; };
 		16492A5827FA3C3B006F0CFF /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 16492A5727FA3C3B006F0CFF /* Credits.html */; };
 		16BED9AB280399F600420EBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BED9AA280399F600420EBC /* AppDelegate.swift */; };
-		16BED9B92803A2EC00420EBC /* AccountsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BED9B82803A2EC00420EBC /* AccountsView.swift */; };
-		16BED9BB2803A2FE00420EBC /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16BED9BA2803A2FE00420EBC /* AccountsViewController.swift */; };
-		16F26AB728038D0900C9C0A9 /* PaneIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F26AB628038D0900C9C0A9 /* PaneIdentifier.swift */; };
+		16C7F154280B9B2600137307 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C7F153280B9B2600137307 /* Menu.swift */; };
+		16C7F157280B9BA600137307 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16C7F156280B9BA600137307 /* MenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +61,8 @@
 		16492A4C27FA34B5006F0CFF /* status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = status.swift; sourceTree = "<group>"; };
 		16492A5727FA3C3B006F0CFF /* Credits.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Credits.html; sourceTree = "<group>"; };
 		16BED9AA280399F600420EBC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		16BED9B82803A2EC00420EBC /* AccountsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountsView.swift; sourceTree = "<group>"; };
-		16BED9BA2803A2FE00420EBC /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
-		16F26AB628038D0900C9C0A9 /* PaneIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaneIdentifier.swift; sourceTree = "<group>"; };
+		16C7F153280B9B2600137307 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		16C7F156280B9BA600137307 /* MenuViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,14 +119,11 @@
 		16492A0C27FA117D006F0CFF /* Busy Bee */ = {
 			isa = PBXGroup;
 			children = (
-				16492A0D27FA117D006F0CFF /* Busy_BeeApp.swift */,
-				16BED9AA280399F600420EBC /* AppDelegate.swift */,
-				16F26AAD2803897B00C9C0A9 /* views */,
-				16F26AB82803905500C9C0A9 /* viewControllers */,
-				16492A4327FA33BA006F0CFF /* models */,
-				16F26AB528038CEE00C9C0A9 /* extensions */,
+				16C7F155280B9B5900137307 /* ViewModels */,
+				16F26AAD2803897B00C9C0A9 /* Views */,
+				16492A4327FA33BA006F0CFF /* Models */,
+				16492A5A27FA454D006F0CFF /* Supporting Files */,
 				16492A1327FA117F006F0CFF /* Preview Content */,
-				16492A5A27FA454D006F0CFF /* supporting files */,
 			);
 			path = "Busy Bee";
 			sourceTree = "<group>";
@@ -166,48 +161,42 @@
 			path = icon_maker;
 			sourceTree = "<group>";
 		};
-		16492A4327FA33BA006F0CFF /* models */ = {
+		16492A4327FA33BA006F0CFF /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				16492A3F27FA298B006F0CFF /* user.swift */,
 				16492A4C27FA34B5006F0CFF /* status.swift */,
 			);
-			path = models;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		16492A5A27FA454D006F0CFF /* supporting files */ = {
+		16492A5A27FA454D006F0CFF /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				16492A0D27FA117D006F0CFF /* Busy_BeeApp.swift */,
+				16BED9AA280399F600420EBC /* AppDelegate.swift */,
 				160D575D27FB4A390063AA42 /* GoogleService-Info.plist */,
 				16492A5727FA3C3B006F0CFF /* Credits.html */,
 				16492A1627FA117F006F0CFF /* Busy_Bee.entitlements */,
 				16492A1127FA117F006F0CFF /* Assets.xcassets */,
 			);
-			name = "supporting files";
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		16F26AAD2803897B00C9C0A9 /* views */ = {
+		16C7F155280B9B5900137307 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				16BED9B82803A2EC00420EBC /* AccountsView.swift */,
+				16C7F156280B9BA600137307 /* MenuViewModel.swift */,
 			);
-			path = views;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		16F26AB528038CEE00C9C0A9 /* extensions */ = {
+		16F26AAD2803897B00C9C0A9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				16F26AB628038D0900C9C0A9 /* PaneIdentifier.swift */,
+				16C7F153280B9B2600137307 /* Menu.swift */,
 			);
-			path = extensions;
-			sourceTree = "<group>";
-		};
-		16F26AB82803905500C9C0A9 /* viewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				16BED9BA2803A2FE00420EBC /* AccountsViewController.swift */,
-			);
-			path = viewControllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,12 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16BED9B92803A2EC00420EBC /* AccountsView.swift in Sources */,
-				16F26AB728038D0900C9C0A9 /* PaneIdentifier.swift in Sources */,
+				16C7F154280B9B2600137307 /* Menu.swift in Sources */,
 				16BED9AB280399F600420EBC /* AppDelegate.swift in Sources */,
 				16492A4D27FA34B5006F0CFF /* status.swift in Sources */,
+				16C7F157280B9BA600137307 /* MenuViewModel.swift in Sources */,
 				16492A0E27FA117D006F0CFF /* Busy_BeeApp.swift in Sources */,
-				16BED9BB2803A2FE00420EBC /* AccountsViewController.swift in Sources */,
 				16492A4027FA298B006F0CFF /* user.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,7 +517,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Harry-OBrien.Busy-Bee";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -558,7 +546,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Harry-OBrien.Busy-Bee";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

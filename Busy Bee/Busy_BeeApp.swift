@@ -1,8 +1,8 @@
 //
 //  Busy_BeeApp.swift
-//  Busy Bee
+//  Busy_Bee
 //
-//  Created by Harry O'Brien on 03/04/2022.
+//  Created by Harry O'Brien on 16/04/2022.
 //
 
 import Cocoa
