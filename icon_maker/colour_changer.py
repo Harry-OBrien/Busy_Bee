@@ -10,11 +10,12 @@ colours = {
     "amber":np.array([242, 189, 66, 255]),
     "green":np.array([88, 165, 92, 255]),
     "black":np.array([40, 40, 40, 255]),
-    "blue":np.array([80, 134,236, 255])
+    "blue":np.array([80, 134,236, 255]),
+    "turqoise":np.array([199, 234, 232, 255])
 }
 
 # Import the image
-colour_icon = (cv2.cvtColor(cv2.imread("./bee_pub/bee_pub_original.png"), cv2.COLOR_BGR2RGB)).astype(np.uint8)
+colour_icon = (cv2.cvtColor(cv2.imread("./sober_bees/bee_black.jpg"), cv2.COLOR_BGR2RGB)).astype(np.uint8)
 
 # Swap the thresheld values for the input colours
 def swap_colours(img, r_replace, g_replace, y_replace, w_replace=0):
@@ -22,12 +23,15 @@ def swap_colours(img, r_replace, g_replace, y_replace, w_replace=0):
     for i, row in enumerate(img):
         for j, pix in enumerate(row):
             r, g, b = pix
-            if r > 200 and g > 200 and b < 150:
-                output_img[i, j] = y_replace
-            elif r > 200 and g < 150 and b < 150:
-                output_img[i, j] = r_replace
-            elif r < 150 and g > 200 and b < 150:
-                output_img[i, j] = g_replace
+            if r <= 200 or g <= 200 or b <= 200:
+                output_img[i, j] = colours["turqoise"]
+            
+            # if r > 200 and g > 200 and b < 150:
+            #     output_img[i, j] = y_replace
+            # elif r > 200 and g < 150 and b < 150:
+            #     output_img[i, j] = r_replace
+            # elif r < 150 and g > 200 and b < 150:
+            #     output_img[i, j] = g_replace
             
     return output_img
 
