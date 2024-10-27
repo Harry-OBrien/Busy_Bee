@@ -29,7 +29,9 @@ class BusyBeeMenu: NSMenu {
         })
         addSeperator()
         
-        let menu_items = view_model.loggedIn ? logged_in_items : logged_out_items
+//        let menu_items = view_model.loggedIn ? logged_in_items : logged_out_items
+        let menu_items = logged_in_items;
+        
         menu_items.forEach({addItem($0)})
         addSeperator()
         
@@ -88,7 +90,6 @@ class BusyBeeMenu: NSMenu {
         return item
     }
         
-    
     private let quitItem = NSMenuItem(
         title: "Quit",
         action: #selector(NSApplication.terminate(_:)),

@@ -30,7 +30,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func redraw_menu() {
-        menu.removeAllItems()
-        menu.build()
+        if let menu = menu {
+            menu.removeAllItems()
+            menu.build()
+        }
     }
 }

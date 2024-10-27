@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		160D575427FB48A50063AA42 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 160D575327FB48A50063AA42 /* FirebaseDatabase */; };
-		160D575627FB48A50063AA42 /* FirebaseDatabaseSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 160D575527FB48A50063AA42 /* FirebaseDatabaseSwift-Beta */; };
-		160D575827FB48A50063AA42 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 160D575727FB48A50063AA42 /* FirebaseFirestore */; };
-		160D575A27FB48A50063AA42 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 160D575927FB48A50063AA42 /* FirebaseFirestoreCombine-Community */; };
-		160D575C27FB48A50063AA42 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 160D575B27FB48A50063AA42 /* FirebaseFirestoreSwift-Beta */; };
 		160D575E27FB4A390063AA42 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 160D575D27FB4A390063AA42 /* GoogleService-Info.plist */; };
 		16492A0E27FA117D006F0CFF /* Busy_BeeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16492A0D27FA117D006F0CFF /* Busy_BeeApp.swift */; };
 		16492A1227FA117F006F0CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16492A1127FA117F006F0CFF /* Assets.xcassets */; };
@@ -70,11 +65,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				160D575A27FB48A50063AA42 /* FirebaseFirestoreCombine-Community in Frameworks */,
-				160D575C27FB48A50063AA42 /* FirebaseFirestoreSwift-Beta in Frameworks */,
-				160D575627FB48A50063AA42 /* FirebaseDatabaseSwift-Beta in Frameworks */,
-				160D575427FB48A50063AA42 /* FirebaseDatabase in Frameworks */,
-				160D575827FB48A50063AA42 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,11 +206,6 @@
 			);
 			name = "Busy Bee";
 			packageProductDependencies = (
-				160D575327FB48A50063AA42 /* FirebaseDatabase */,
-				160D575527FB48A50063AA42 /* FirebaseDatabaseSwift-Beta */,
-				160D575727FB48A50063AA42 /* FirebaseFirestore */,
-				160D575927FB48A50063AA42 /* FirebaseFirestoreCombine-Community */,
-				160D575B27FB48A50063AA42 /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = "Busy Bee";
 			productReference = 16492A0A27FA117D006F0CFF /* Busy Bee.app */;
@@ -295,7 +280,6 @@
 			);
 			mainGroup = 16492A0127FA117D006F0CFF;
 			packageReferences = (
-				160D575227FB48A50063AA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 16492A0B27FA117D006F0CFF /* Products */;
 			projectDirPath = "";
@@ -666,45 +650,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		160D575227FB48A50063AA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		160D575327FB48A50063AA42 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 160D575227FB48A50063AA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		160D575527FB48A50063AA42 /* FirebaseDatabaseSwift-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 160D575227FB48A50063AA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseDatabaseSwift-Beta";
-		};
-		160D575727FB48A50063AA42 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 160D575227FB48A50063AA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		160D575927FB48A50063AA42 /* FirebaseFirestoreCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 160D575227FB48A50063AA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFirestoreCombine-Community";
-		};
-		160D575B27FB48A50063AA42 /* FirebaseFirestoreSwift-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 160D575227FB48A50063AA42 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFirestoreSwift-Beta";
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 16492A0227FA117D006F0CFF /* Project object */;
 }

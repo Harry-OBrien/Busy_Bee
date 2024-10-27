@@ -7,8 +7,8 @@
 
 import Foundation
 import AppKit
-import Firebase
-import FirebaseDatabase
+//import Firebase
+//import FirebaseDatabase
 
 class MenuViewModel: ObservableObject {
     
@@ -27,14 +27,15 @@ class MenuViewModel: ObservableObject {
     /*@Published*/
     var user: User! {
         didSet {
-            if user.id != "NO_AUTH" {
-                ref.child("users/\(user.id)/status").setValue(user.status.rawValue)
-            }
+//            if user.id != "NO_AUTH" {
+//                ref.child("users/\(user.id)/status").setValue(user.status.rawValue)
+//            }
         }
     }
     
     private static func get_user_id() -> String? {
-        return UserDefaults.standard.string(forKey: "user_id")
+        return "Harry";
+//        return UserDefaults.standard.string(forKey: "user_id")
     }
     /*@Published*/
     var loggedIn: Bool
@@ -44,7 +45,7 @@ class MenuViewModel: ObservableObject {
     
     private let databaseURL = "https://busy-bee-480f7-default-rtdb.europe-west1.firebasedatabase.app/"
     private var refHandle: UInt!
-    private var ref: DatabaseReference!
+//    private var ref: DatabaseReference!
     
     init(update_user_icon: @escaping (NSImage)->(), redraw: @escaping ()->()) {
         loggedIn = true
@@ -52,47 +53,48 @@ class MenuViewModel: ObservableObject {
         self.redraw = redraw
         
         // Firebase stuff!
-        FirebaseApp.configure()
-        ref = Database.database(url: databaseURL).reference()
+//        FirebaseApp.configure()
+//        ref = Database.database(url: databaseURL).reference()
         
         // Initial read
-        ref.child("users").getData(completion: { error, snapshot in
-            guard error == nil, let friend_list = snapshot.value as? [String: [String:Int]] else {
-                print("Failed to parse data on first load")
-                return
-            }
-            var updated_friends = [User]()
-            for (friend, friend_status) in friend_list {
-                if friend == self.user.id {
-                    continue
-                }
-                
-                let status = WorkStatus(rawValue: friend_status["status"]!) ?? WorkStatus.IDLE
-                updated_friends.append(User(id: friend, status: status))
-            }
-            
-            self.friends = updated_friends
-        });
+        self.friends = getMockFriends();
+//        ref.child("users").getData(completion: { error, snapshot in
+//            guard error == nil, let friend_list = snapshot.value as? [String: [String:Int]] else {
+//                print("Failed to parse data on first load")
+//                return
+//            }
+//            var updated_friends = [User]()
+//            for (friend, friend_status) in friend_list {
+//                if friend == self.user.id {
+//                    continue
+//                }
+//                
+//                let status = WorkStatus(rawValue: friend_status["status"]!) ?? WorkStatus.IDLE
+//                updated_friends.append(User(id: friend, status: status))
+//            }
+//            
+//            self.friends = updated_friends
+//        });
         
         // Live observation
-        refHandle = ref.child("users").observe(.value, with: { snapshot in
-            guard let friend_list = snapshot.value as? [String: [String:Int]] else {
-                print("Failed to parse data on update")
-                return
-            }
-            
-            var updated_friends = [User]()
-            for (friend, friend_status) in friend_list {
-                if friend == self.user.id {
-                    continue
-                }
-                
-                let status = WorkStatus(rawValue: friend_status["status"]!) ?? WorkStatus.FREE
-                updated_friends.append(User(id: friend, status: status))
-            }
-            
-            self.friends = updated_friends
-        })
+//        refHandle = ref.child("users").observe(.value, with: { snapshot in
+//            guard let friend_list = snapshot.value as? [String: [String:Int]] else {
+//                print("Failed to parse data on update")
+//                return
+//            }
+//            
+//            var updated_friends = [User]()
+//            for (friend, friend_status) in friend_list {
+//                if friend == self.user.id {
+//                    continue
+//                }
+//                
+//                let status = WorkStatus(rawValue: friend_status["status"]!) ?? WorkStatus.FREE
+//                updated_friends.append(User(id: friend, status: status))
+//            }
+//            
+//            self.friends = updated_friends
+//        })
         
         // Set initial state
         user = User(id: MenuViewModel.get_user_id() ?? "Anna", status: .FREE)
